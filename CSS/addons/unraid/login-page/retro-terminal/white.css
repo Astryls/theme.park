@@ -1,4 +1,7 @@
 
 body {
   background-color: lightblue;
+
+div.logo.angle 
+  display:none;
 }
