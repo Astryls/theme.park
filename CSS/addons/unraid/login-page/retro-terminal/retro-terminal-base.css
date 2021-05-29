@@ -57,42 +57,6 @@
 }
 
 html {background: var(--main-bg-color) !important;}
-body {background: var(--main-bg-color) !important;}
-/* CRT SCREEN FLICKER*/
-body::before {
-    content: "";
-    background: radial-gradient(ellipse at center,var(--body-before) 0,rgb(0, 0, 0) 100%) !important;
-    background-repeat: repeat-y !important;
-    background-size: 100% 4px !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    animation: var(--body-animation) 0.01s infinite;
-    pointer-events: none;
-}
-/* CRT BACKGROUND WITH LINES*/
-body::after {
-    content: "";
-    background: radial-gradient(ellipse at center,var(--body-after) 0,rgba(0, 0, 0, 0.6) 80%) center center/cover no-repeat fixed, linear-gradient(#0000 0%,#0000 0%) !important;
-    background-repeat: repeat-y !important;
-    background-size: 100% 4px !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-@keyframes flicker {0% {opacity: 0.37633;}5% {opacity: 0.70002;}10% {opacity: 0.64427;}15% {opacity: 0.35591;}20% {opacity: 0.34054;}25% {opacity: 0.54917;}30% {opacity: 0.41056;}35% {opacity: 0.67637;}40% {opacity: 0.23681;}45% {opacity: 0.64945;}50% {opacity: 0.67522;}55% {opacity: 0.56049;}60% {opacity: 0.06113;}65% {opacity: 0.95766;}70% {opacity: 0.77945;}75% {opacity: 0.33817;}80% {opacity: 0.19735;}85% {opacity: 0.84337;}90% {opacity: 0.82867;}95% {opacity: 0.65512;}100% {opacity: 0.15179;}}
 
 @media only screen and (max-width: 768px) {
     #login {
